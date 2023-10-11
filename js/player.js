@@ -74,7 +74,7 @@ class Player {
 	}
 
 	animateSprite(frameCounter) {
-		if (this.frameCounter % 6 === 0) {
+		if (frameCounter % 6 === 0) {
 			this.img.frameIndex++
 
 			if (this.img.frameIndex >= this.img.frames) {
