@@ -14,10 +14,10 @@ class Player {
 		this.x = canvasW * 0.08
 		this.y = canvasH * 0.8
 
-		this.vx = 1
+		this.vx = 5
 
-		this.w = 100
-		this.h = 115
+		this.w = 120
+		this.h = 130
 
 		this.actions = {
 			RIGHT: false,
@@ -84,12 +84,13 @@ class Player {
 	}
 	
 	move() {
-		if (this.actions.RIGHT) {
-			this.x += this.vx
+		if (this.actions.RIGHT && this.x + this.vx + this.w < this.canvasW) {
+			this.x += this.vx;
 		}
-        if (this.actions.LEFT) {
-			this.x -= this.vx
+		if (this.actions.LEFT && this.x - this.vx > 0) {
+			this.x -= this.vx;
 		}
 	}
+	
 
 }
